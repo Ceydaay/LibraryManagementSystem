@@ -1,0 +1,36 @@
+﻿<html>
+
+<head>
+    <link href="~/lib/Bootstrap.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #e0f7e0; /* Açık yeşil arka plan */
+        }
+
+        footer {
+            background-color: #4caf50; /* Koyu yeşil footer arka plan */
+        }
+
+        footer p {
+            color: white; /* Beyaz metin */
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <partial name="_navPartial" />
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="py-1 text-center text-lg-start mt-auto">
+        <div class="text-center p-3">
+            <p class="mb-0">&copy; 2024 Ceyda Yılmaz. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

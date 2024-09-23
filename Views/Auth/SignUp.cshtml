@@ -1,0 +1,64 @@
+﻿@model Auth
+
+<div class="row justify-content-center mt-5">
+
+    <div class="col-md-6 col-lg-5">
+
+        <div class="card shadow-lg border-0">
+
+            <div class="card-header bg-success text-white fw-bold fs-4 text-center">
+                Sign-Up
+            </div>
+
+            <div class="card-body p-4">
+
+                <form method="post" asp-controller="Auth" asp-action="SignUp">
+
+                    <div class="form-floating mb-3">
+                        <input asp-for="FullName" type="text" class="form-control border-success" id="floatingFullName" placeholder="Full Name">
+                        <label for="floatingFullName">Full Name</label>
+                        <span asp-validation-for="FullName" class="text-danger fw-bold mt-1"></span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input asp-for="Email" type="email" class="form-control border-success" id="floatingEmail" placeholder="name@example.com">
+                        <label for="floatingEmail">Email Address</label>
+                        <span asp-validation-for="Email" class="text-danger fw-bold mt-1"></span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input asp-for="PhoneNumber" type="tel" class="form-control border-success" id="floatingPhone" placeholder="Phone Number">
+                        <label for="floatingPhone">Phone Number</label>
+                        <span asp-validation-for="PhoneNumber" class="text-danger fw-bold mt-1"></span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input asp-for="Password" type="password" class="form-control border-success" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                        <span asp-validation-for="Password" class="text-danger fw-bold mt-1"></span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input asp-for="PasswordConfirm" type="password" class="form-control border-success" id="floatingPasswordConfirm" placeholder="Confirm Password">
+                        <label for="floatingPasswordConfirm">Password Confirm</label>
+                        <span asp-validation-for="PasswordConfirm" class="text-danger fw-bold mt-1"></span>
+                    </div>
+
+                    <button class="btn btn-success w-100 py-2" type="submit">
+                        <i class="fas fa-user-plus me-2"></i>Sign Up
+                    </button>
+
+                    <div class="mt-3 text-center">
+                        <small class="text-muted">Already have an account? <a href="#" class="text-success">Sign In here</a></small>
+                    </div>
+
+                    <p class="mt-5 mb-3 text-center text-muted">© 2017–2024</p>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

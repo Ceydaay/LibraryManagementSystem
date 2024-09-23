@@ -1,0 +1,15 @@
+﻿@model LibraryManagementSystem.ViewModels.BookViewModel
+
+<div class="card mb-3" style="border: 1px solid #4caf50;">
+    <div class="card-body">
+        <p style="color: #4caf50;"><strong>Author Name:</strong> @ViewBag.authorfname</p>
+        <h5 class="card-title" style="color: #4caf50;">@Model.Title</h5>
+        <p class="card-text" style="color: #4caf50;">Genre: @Model.Genre</p>
+        <p class="card-text" style="color: #4caf50;">Publish Date: @Model.PublishDate</p>
+        <p class="card-text" style="color: #4caf50;">Copies Available: @Model.CopiesAvailable</p>
+        <p class="card-text" style="color: #4caf50;">ISBN: @Model.ISBN</p>
+    </div>
+</div>
+
+
+
