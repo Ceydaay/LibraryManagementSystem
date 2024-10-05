@@ -6,13 +6,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
 {
     // Specify the path to the login page when authentication is required.
-    options.LoginPath = new PathString("/");
+    options.LoginPath = new PathString("/Auth/SignUp");
 
     // Specify the path to handle cases when a user is denied access due to insufficient permissions.
-    options.AccessDeniedPath = new PathString("/");
+    //options.AccessDeniedPath = new PathString("/Auth/SignUp");
 
     // Specify the path to redirect after logout.
-    options.LogoutPath = new PathString("/");
+    //options.LogoutPath = new PathString("/Auth/SignUp");    
 });
 
 // Register services required by controllers and views.
