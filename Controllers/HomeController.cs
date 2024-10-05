@@ -12,6 +12,7 @@ namespace LibraryManagementSystem.Controllers
             // Redirect the user to the SignUp page of the AuthController.
             // When the root page is accessed, it will redirect to the SignUp action in the AuthController.
             //return RedirectToAction("SignUp", "Auth");
+
             return View();
         }
 
