@@ -112,9 +112,13 @@ namespace LibraryManagementSystem.Controllers
             var author = _authors.Find(x => x.Id == formData.Id);
 
             // Update the author's properties with the new data from the form.
-            author.FirstName = formData.FirstName;
-            author.LastName = formData.LastName;
-            author.DateOfBirth = formData.DateOfBirth;
+            if(author != null)
+            {
+                author.FirstName = formData.FirstName;
+                author.LastName = formData.LastName;
+                author.DateOfBirth = formData.DateOfBirth;
+            }
+           
 
             // Redirect back to the list of authors after successful edit.
             return RedirectToAction("List");

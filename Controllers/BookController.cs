@@ -1,5 +1,6 @@
 ﻿using LibraryManagementSystem.Models;
 using LibraryManagementSystem.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Reflection;
@@ -7,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace LibraryManagementSystem.Controllers
 {
+    [Authorize]
+    [Route("book")]
     public class BookController : Controller
     {
         // This method populates a dropdown with authors' full names and IDs for use in book creation/editing forms.
@@ -52,7 +55,8 @@ namespace LibraryManagementSystem.Controllers
                 CopiesAvailable = 67567 },
         };
 
-        // Display the list of books that are not marked as deleted.
+        // Display the list of books that are not marked as deleted.      
+        [Route("liste")]
         public IActionResult List()
         {
             var books = _books.Where(x => x.IsDeleted == false).ToList();
@@ -60,6 +64,8 @@ namespace LibraryManagementSystem.Controllers
         }
 
         // Display detailed information about a book by its ID.
+        [Route("{stringURL?}/{id}")]
+        //.com/denemece-askjdhasjdas/
         public IActionResult Details(int id)
         {
             // Create a new view model for passing book data to the view.
